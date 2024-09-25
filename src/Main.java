@@ -1,7 +1,4 @@
-import menuPrincipal.MenuDatosPrimitivos;
-import menuPrincipal.MenuIfElse;
-import menuPrincipal.MenuPrincipal;
-import menuPrincipal.MenuTipoOperadores;
+import menuPrincipal.*;
 import programas.Programas;
 import utilidades.Validacion;
 
@@ -309,58 +306,21 @@ public class Main {
                             break;
                         case 8:
                             do{
-                                System.out.println("******************************************************************");
-                                System.out.println("*******             DO WHILE                               *******");
-                                System.out.println("******************************************************************");
-                                System.out.println("******************************************************************");
-                                System.out.println("*                                                                *");
-                                System.out.println("*  1. Explicación DO WHILE                                       *");
-                                System.out.println("*  2. Programa DO WHILE                                          *");
-                                System.out.println("*  3. Volver menú inicial                                        *");
-                                System.out.println("******************************************************************");
-                                System.out.println("Por favor digita tu mejor opción:  ");
+                                MenuDoWhile.PrincipalDoWhile();
+                                Validacion.validarOpcion(scannerMainFirst);
                                 opc8 = scannerMainFirst.nextInt();
 
                                 switch (opc8){
                                     case 1:
-                                        System.out.println("******************************************************************");
-                                        System.out.println("*******         1. EXPLICACIÓN DO WHILE                 **********");
-                                        System.out.println("******************************************************************");
-                                        System.out.println("* Un bucle do while es una estructura de control de flujo que    *");
-                                        System.out.println("* permite ejecutar un bloque de código repetidamente mientras se *");
-                                        System.out.println("* cumple una condición. La característica distintiva del bucle   *");
-                                        System.out.println("* do while es que el bloque de código se ejecuta al menos        *");
-                                        System.out.println("* una vez antes de que se evalúe la condición.                   *");
-                                        System.out.println("******************************************************************");
-                                        break;
+                                      MenuDoWhile.ExplicacionDoWhile();
+                                    break;
                                     case 2:
-                                        System.out.println("******************************************************************");
-                                        System.out.println("*******          2. PROGRAMA DO WHILE                   **********");
-                                        System.out.println("******************************************************************");
+                                        MenuDoWhile.ExplicacionPrograma();
+                                        Programas.ProgramaDoWhilew();
 
-                                        Random magic = new Random();
-                                        int numalea = magic.nextInt(1,10);//numero magico
-                                        Scanner dato= new Scanner(System.in);
-                                        int usuario;
-                                        do {
-                                            System.out.println("¿QUE TANTA SUERTE TIENES...? Vamos averiguarlo");
-                                            System.out.println("Ingresa un número del 1 al 10 ");
-                                            usuario=dato.nextInt();
-                                            if (usuario<numalea){
-                                                System.out.println("El número ingresado es menor al número mágico");
-                                            } else if (usuario>numalea) {
-                                                System.out.println("El número ingresado es mayor al número mágico");
-                                            }else
-                                            {
-                                                System.out.println("Le atinaste al número, el número pensado por el sistema es " +numalea);
-                                            }
-                                        }while (usuario!=numalea);
-                                        System.out.println("*********");
-
-                                        System.out.println("******************************************************************");
                                         break;
                                     default:
-                                        //System.out.println("Número no válido, por favor verifique");
+
                                         if (opc8 == 3) {
 
                                             System.out.println("Si quieres volver al menú Principal presiona enter");
@@ -374,61 +334,21 @@ public class Main {
 
                         case 9:
                             do {
-                                System.out.println("******************************************************************");
-                                System.out.println("*******              9. BUCLE WHILE                        *******");
-                                System.out.println("******************************************************************");
-                                System.out.println("******************************************************************");
-                                System.out.println("*                                                                *");
-                                System.out.println("*  1. Explicación de WHILE                                       *");
-                                System.out.println("*  2. Programa de While                                          *");
-                                System.out.println("*  3. Volver menú inicial                                        *");
-                                System.out.println("*                                                                *");
-                                System.out.println("******************************************************************");
-                                System.out.println("Por favor digita tu mejor opción:  ");
+                                BucleWhile.PrincipalWhile();
+                                Validacion.validarOpcion(scannerMainFirst);
                                 opc9 = scannerMainFirst.nextInt();
 
                                 switch (opc9) {
                                     case 1:
-                                        System.out.println("******************************************************************");
-                                        System.out.println("*******         1. EXPLICACIÓN WHILE                    **********");
-                                        System.out.println("******************************************************************");
-                                        System.out.println("* Como su nombre indica (while significa mientras), repetir una  *");
-                                        System.out.println("* acción en un bucle siempre y cuando se cumpla una condición    *");
-                                        System.out.println("* booleana de control.                                           *");
-                                        System.out.println("*                                                                *");
-                                        System.out.println("*     while (condición) {// bloque de codigo que se repite       *");
-                                        System.out.println("*     mientras la condición sea verdadera }                      *");
-                                        System.out.println("*                                                                *");
-                                        System.out.println("******************************************************************");
+                                        BucleWhile.ExplicacionWhile();
                                         break;
                                     case 2:
-                                        System.out.println("******************************************************************");
-                                        System.out.println("*******           2. PROGRAMA WHILE                     **********");
-                                        System.out.println("******************************************************************");
-                                        System.out.println("*                                                                *");
-                                        System.out.println("* ¿Quieres saber cuanto es la sumatoria desde el número 1 hasta  *");
-                                        System.out.println("*  llegar al número ingresado?                                   *");
-                                        System.out.println("*  1. Si                                                         *");
-                                        System.out.println("*  2. No                                                         *");
-                                        System.out.println("*  Ingresa la opción :                                           *");
-                                        System.out.println("******************************************************************");
+                                        BucleWhile.ProgramaWhile();
                                         opc92 = scannerMainFirst.nextInt();
 
                                         switch (opc92) {
                                             case 1:
-                                                Scanner dato = new Scanner(System.in);
-                                                System.out.println("Ingresa el número a sumar ");
-                                                int ing = dato.nextInt();
-                                                int num9 = 1;
-                                                int contador = 0;
-
-                                                while (num9 <= ing) {
-                                                    System.out.println("Incremento del numero                    + " + num9);
-                                                    contador = contador + num9;
-                                                    num9++;
-                                                }
-                                                System.out.println("_____________________________________________");
-                                                System.out.println("La sumatoria de los números del 1 al " + ing + " es " + contador);
+                                                Programas.ProgramaWhile();
                                                 break;
                                             case 2:
                                                 System.out.println("Vuelve después..... ");
@@ -452,62 +372,22 @@ public class Main {
 
                         case 10:
                             do {
-                                System.out.println("******************************************************************");
-                                System.out.println("*******             10. BUCLE FOR                          *******");
-                                System.out.println("******************************************************************");
-                                System.out.println("******************************************************************");
-                                System.out.println("*                                                                *");
-                                System.out.println("*  1. Explicación de FOR                                         *");
-                                System.out.println("*  2. Programa de For                                            *");
-                                System.out.println("*  3. Volver menú inicial                                        *");
-                                System.out.println("*                                                                *");
-                                System.out.println("******************************************************************");
-                                System.out.println("Por favor digita tu mejor opción:  ");
+                                BucleFor.PrincipalFor();
+                                Validacion.validarOpcion(scannerMainFirst);
                                 opc10 = scannerMainFirst.nextInt();
 
                                 switch (opc10) {
                                     case 1:
-                                        System.out.println("******************************************************************");
-                                        System.out.println("*******         1. EXPLICACIÓN FOR                      **********");
-                                        System.out.println("******************************************************************");
-                                        System.out.println("* La sentencia “for” en Java es una estructura de control de     *");
-                                        System.out.println("* ciclo que se utiliza para ejecutar un bloque de código una     *");
-                                        System.out.println("* cantidad determinada de veces.                                 *");
-                                        System.out.println("*                                                                *");
-                                        System.out.println("*     for (inicialización;condición;expresion_de_interacción) {  *");
-                                        System.out.println("*     bloque de código que se ejecuta en cada interacción}       *");
-                                        System.out.println("*                                                                *");
-                                        System.out.println("******************************************************************");
+                                        BucleFor.ExplicacionFor();
                                         break;
                                     case 2:
-                                        System.out.println("******************************************************************");
-                                        System.out.println("*******           2. PROGRAMA FOR                       **********");
-                                        System.out.println("******************************************************************");
-                                        System.out.println("*                                                                *");
-                                        System.out.println("* ¿Quieres saber cuanto es la sumatoria desde el número 1 hasta  *");
-                                        System.out.println("*  llegar al número ingresado?                                   *");
-                                        System.out.println("*  1. Si                                                         *");
-                                        System.out.println("*  2. No                                                         *");
-                                        System.out.println("*  Ingresa la opción :                                           *");
-                                        System.out.println("******************************************************************");
+                                        BucleFor.ExplicacionPrograma();
+
                                         opc102 = scannerMainFirst.nextInt();
 
                                         switch (opc102) {
                                             case 1:
-                                                Scanner ingfor = new Scanner(System.in);
-                                                System.out.println("Ingresa el número a sumar");
-
-                                                int sumfor = ingfor.nextInt();
-                                                int num10 = 1;
-                                                int contador2 = 0;
-
-                                                for (num10 = 1; num10 <= sumfor; num10++) {
-                                                    System.out.println("Incremento del numero " + num10);
-                                                    contador2 = contador2 + num10;
-
-                                                }
-
-                                                System.out.println("La sumatoria de los números del 1 al " + sumfor + " es " + contador2);
+                                                Programas.ProgramaFor();
                                                 break;
                                             case 2:
                                                 System.out.println("Vuelve después..... ");
