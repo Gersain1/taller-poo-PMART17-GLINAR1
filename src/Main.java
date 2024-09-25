@@ -5,6 +5,7 @@ import utilidades.Validacion;
 import javax.naming.BinaryRefAddr;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import java.awt.*;
 import java.sql.SQLOutput;
 import java.util.Random;
 import java.util.Scanner;
@@ -164,68 +165,16 @@ public class Main {
 
                         case 6:
                             do {
-                                System.out.println("******************************************************************");
-                                System.out.println("*******        6. CONDICIONAL SWITCH                       *******");
-                                System.out.println("******************************************************************");
-                                System.out.println("******************************************************************");
-                                System.out.println("*                                                                *");
-                                System.out.println("*  1. Explicación de Switch                                      *");
-                                System.out.println("*  2. Programa de Switch                                         *");
-                                System.out.println("*  3. Volver menú inicial                                        *");
-                                System.out.println("*                                                                *");
-                                System.out.println("******************************************************************");
-                                System.out.println("Por favor digita tu mejor opción:  ");
+                               MenuSwitch.Switch();
+                               Validacion.validarOpcion(scannerMainFirst);
                                 opc6 = scannerMainFirst.nextInt();
                                 switch (opc6) {
                                     case 1:
-                                        System.out.println("******************************************************************");
-                                        System.out.println("*******         1. EXPLICACIÓN SWITCH                   **********");
-                                        System.out.println("******************************************************************");
-                                        System.out.println("*                                                                *");
-                                        System.out.println("* El condicional switch case es una estructura que evalúa más de *");
-                                        System.out.println("* un caso y se caracteriza por: Selección de una opción entre    *");
-                                        System.out.println("* varias. Switch recibe un “caso” y lo evalúa hasta encontrar    *");
-                                        System.out.println("* el caso que corresponda. Se puede usar la opción “default”     *");
-                                        System.out.println("* para cuando no se encuentra el caso dado                       *");
-                                        System.out.println("*                                                                *");
-                                        System.out.println("******************************************************************");
+                                        MenuSwitch.ExplicacionSwitch();
                                         break;
                                     case 2:
-                                        System.out.println("******************************************************************");
-                                        System.out.println("*******         2. PROGRAMA SWITCH                      **********");
-                                        System.out.println("******************************************************************");
-                                        System.out.println("*                                                                *");
-                                        System.out.println("* Ingresa la nota que deseas consultar                           *");
-                                        Scanner scanner = new Scanner(System.in);
-                                        nota = scanner.nextInt();
-                                        switch (nota)
-                                        {
-                                            case 1:
-                                                System.out.println("Su calificación es F ");
-                                                break;
-                                            case 2:
-                                                System.out.println("Su calificación es F ");
-                                                break;
-                                            case 3:
-                                            case 4:
-                                                System.out.println("Su calificación es D");
-                                                break;
-                                            case 5:
-                                            case 6:
-                                                System.out.println("Su calificación es C");
-                                                break;
-                                            case 7:
-                                            case 8:
-                                                System.out.println("Su calificación es B");
-                                                break;
-                                            case 9:
-                                            case 10:
-                                                System.out.println("Su calificación es A");
-                                                break;
-                                            default:
-                                                System.out.println("Número no válido, por favor verifique");
-
-                                        }
+                                        MenuSwitch.ExplicacionProgramaSwitch();
+                                        Programas.ProgramaSwitch();
                                         break;
                                     default:
                                         //System.out.println("Número no válido, por favor verifique");
@@ -241,49 +190,21 @@ public class Main {
                             break;
                         case 7:
                             do {
-                                System.out.println("******************************************************************");
-                                System.out.println("*******             7. TERNARIA                            *******");
-                                System.out.println("******************************************************************");
-                                System.out.println("******************************************************************");
-                                System.out.println("*                                                                *");
-                                System.out.println("*  1. Explicación de Ternaria                                    *");
-                                System.out.println("*  2. Programa de Ternaria                                       *");
-                                System.out.println("*  3. Volver menú inicial                                        *");
-                                System.out.println("*                                                                *");
-                                System.out.println("******************************************************************");
-                                System.out.println("Por favor digita tu mejor opción:  ");
+                                MenuTernaria.MenuExplTernaria();
+                                Validacion.validarOpcion(scannerMainFirst);
                                 opc7 = scannerMainFirst.nextInt();
 
                                 switch (opc7) {
                                     case 1:
-                                        System.out.println("******************************************************************");
-                                        System.out.println("*******         1. EXPLICACIÓN TERNARIA                 **********");
-                                        System.out.println("******************************************************************");
-                                        System.out.println("* El operador ternario en Java es una construcción que permite   *");
-                                        System.out.println("* tomar decisiones basadas en una condición booleana de manera   *");
-                                        System.out.println("* concisa en una sola línea de código                            *");
-                                        System.out.println("*                                                                *");
-                                        System.out.println("*     String respuesta = (num % 2 == 0) ? \"Par\" : \"Impar\";   *");
-                                        System.out.println("******************************************************************");
-                                        break;
+                                        MenuTernaria.ExplicacionTernaria();
+                                       break;
                                     case 2:
-                                        System.out.println("******************************************************************");
-                                        System.out.println("*******           2. PROGRAMA TERNARIA                  **********");
-                                        System.out.println("******************************************************************");
-                                        System.out.println("*                                                                *");
-                                        System.out.println("* ¿Quieres saber si tu número es par o impar?                    *");
-                                        System.out.println("*  1. Si                                                         *");
-                                        System.out.println("*  2. No                                                         *");
-                                        System.out.println("*  Ingresa la opción :                                           *");
-                                        System.out.println("******************************************************************");
+                                        MenuTernaria.ExplicacionProgTernaria();
                                         opc72 = scannerMainFirst.nextInt();
 
                                         switch (opc72) {
                                             case 1:
-                                                System.out.println("Ingresa el número ");
-                                                num = scannerMainFirst.nextInt();
-                                                String respuesta = (num % 2 == 0) ? "Par" : "Impar";
-                                                System.out.println("El número es " + respuesta);
+                                                Programas.ProgramaTernaria();
                                                 break;
                                             case 2:
                                                 System.out.println("Vuelve después..... ");

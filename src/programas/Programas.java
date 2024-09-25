@@ -54,6 +54,7 @@ public class Programas{
             }
         }
     }
+<<<<<<< HEAD
 
     public static void ProgramaDoWhilew(){
         Random magic = new Random();
@@ -108,4 +109,47 @@ public class Programas{
 
         System.out.println("La sumatoria de los números del 1 al " + sumfor + " es " + contador2);
     }
+=======
+    ///Programa Swtich
+    public static void ProgramaSwitch (){
+        Scanner scanner = new Scanner(System.in);
+        int nota = scanner.nextInt();
+        switch (nota)
+        {
+            case 1:
+                System.out.println("Su calificación es F ");
+                break;
+            case 2:
+                System.out.println("Su calificación es F ");
+                break;
+            case 3:
+            case 4:
+                System.out.println("Su calificación es D");
+                break;
+            case 5:
+            case 6:
+                System.out.println("Su calificación es C");
+                break;
+            case 7:
+            case 8:
+                System.out.println("Su calificación es B");
+                break;
+            case 9:
+            case 10:
+                System.out.println("Su calificación es A");
+                break;
+            default:
+                System.out.println("Número no válido, por favor verifique");
+
+        }
+    }
+    public static void ProgramaTernaria (){
+        System.out.println("Ingresa el número ");
+        Scanner scanner = new Scanner(System.in);
+        int num = scanner.nextInt();
+        String respuesta = (num % 2 == 0) ? "Par" : "Impar";
+        System.out.println("El número es " + respuesta);
+    }
+
+>>>>>>> b075b2d8f1da9e40d828dc20e76ff9d65d63d5c3
 }
