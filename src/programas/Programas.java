@@ -54,7 +54,6 @@ public class Programas{
             }
         }
     }
-<<<<<<< HEAD
 
     public static void ProgramaDoWhilew(){
         Random magic = new Random();
@@ -109,7 +108,7 @@ public class Programas{
 
         System.out.println("La sumatoria de los números del 1 al " + sumfor + " es " + contador2);
     }
-=======
+
     ///Programa Swtich
     public static void ProgramaSwitch (){
         Scanner scanner = new Scanner(System.in);
@@ -151,5 +150,4 @@ public class Programas{
         System.out.println("El número es " + respuesta);
     }
 
->>>>>>> b075b2d8f1da9e40d828dc20e76ff9d65d63d5c3
 }
