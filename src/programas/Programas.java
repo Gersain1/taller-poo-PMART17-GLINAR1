@@ -52,4 +52,45 @@ public class Programas{
             }
         }
     }
+    ///Programa Swtich
+    public static void ProgramaSwitch (){
+        Scanner scanner = new Scanner(System.in);
+        int nota = scanner.nextInt();
+        switch (nota)
+        {
+            case 1:
+                System.out.println("Su calificación es F ");
+                break;
+            case 2:
+                System.out.println("Su calificación es F ");
+                break;
+            case 3:
+            case 4:
+                System.out.println("Su calificación es D");
+                break;
+            case 5:
+            case 6:
+                System.out.println("Su calificación es C");
+                break;
+            case 7:
+            case 8:
+                System.out.println("Su calificación es B");
+                break;
+            case 9:
+            case 10:
+                System.out.println("Su calificación es A");
+                break;
+            default:
+                System.out.println("Número no válido, por favor verifique");
+
+        }
+    }
+    public static void ProgramaTernaria (){
+        System.out.println("Ingresa el número ");
+        Scanner scanner = new Scanner(System.in);
+        int num = scanner.nextInt();
+        String respuesta = (num % 2 == 0) ? "Par" : "Impar";
+        System.out.println("El número es " + respuesta);
+    }
+
 }
